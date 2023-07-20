@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simon Dice</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>SIMON DICE by Emiliano Diaz</h1>
+    <div class="simon-device">
+        <div class="top-row">
+            <div id="green" class="button"></div>
+            <div id="red" class="button"></div>
+        </div>
+        <div class="bottom-row">
+            <div id="yellow" class="button"></div>
+            <div id="blue" class="button"></div>
+        </div>
+    </div>
+    <div class="scoreboard">
+        <p>Puntaje: <span id="score">0</span></p>
+        <p>Nivel: <span id="level">1</span></p>
+    </div>
+      
+    <button id="start">Comenzar</button>
+    <button id="reset" disabled>Reiniciar</button>
+
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2> ¡Has Perdido! Juego terminado</h2>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
