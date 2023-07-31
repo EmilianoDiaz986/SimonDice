@@ -3,35 +3,81 @@
 <head>
     <title>Simon Dice</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1>SIMON DICE by Emiliano Diaz</h1>
-    <div class="simon-device">
-        <div class="top-row">
-            <div id="green" class="button"></div>
-            <div id="red" class="button"></div>
-        </div>
-        <div class="bottom-row">
-            <div id="yellow" class="button"></div>
-            <div id="blue" class="button"></div>
-        </div>
+
+    <div class="info">
+        <a class="button button-info" href="contacto.html">Contacto</a>
+        <a class="button button-info" href="https://github.com/EmilianoDiaz986/SimonDice" target="_blank">Github</a>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </div>
-    <div class="scoreboard">
+    
+
+
+</head>
+
+<body>
+    <a href="index.html" style="display: block;">
+        <img src="logo.png" alt="logo">
+      </a>
+      
+
+    <div class="game-info">
+        <p>Tiempo: <span id="timer">0</span></p>
         <p>Puntaje: <span id="score">0</span></p>
         <p>Nivel: <span id="level">1</span></p>
     </div>
-      
-    <button id="start">Comenzar</button>
-    <button id="reset" disabled>Reiniciar</button>
-
-
-    <div id="game-over-modal" class="modal">
-        <div class="modal-content">
-            <h2> ¡Has Perdido! Juego terminado</h2>
-            <button id="close-modal">Cerrar</button>
+    <div class="simon-device">
+        <div class="top-row">
+            <div id="green" class="button-juego"></div>
+            <div id="red" class="button-juego"></div>
+        </div>
+        <div class="bottom-row">
+            <div id="yellow" class="button-juego"></div>
+            <div id="blue" class="button-juego"></div>
         </div>
     </div>
 
+
+    <button id="start">Comenzar</button>
+    <button id="reset" disabled>Reiniciar</button>
+    <button id="show-ranking">Mostrar Ranking</button>
+
+    <div id="name-form" class="hidden">
+        <form>
+            <label for="player-name">Ingresa tu nombre (mínimo 3 letras):</label>
+            <input type="text" id="player-name" required minlength="3">
+            <button type="submit" id="start-game">Comenzar</button>
+        </form>
+    </div>
+
+
+
+<div id="game-over-modal" class="modal">
+    <div class="modal-content">
+      <h3>¡Has Perdido! Juego terminado</h2>
+      <p>Nombre: <span id="game-over-name"></span></p>
+      <p>Puntaje: <span id="game-over-score"></span></p>
+      <p>Nivel: <span id="game-over-level"></span></p>
+      <p>Tiempo : <span id="game-over-time"></span></p>
+      <p>Fecha y Hora: <span id="game-over-datetime"></span></p>
+      <button id="close-modal">Cerrar</button>
+    </div>
+  </div>
+
+  <div id="ranking-modal" class="modal">
+    <div class="modal-content">
+      <h2>Ranking de Partidas</h2>
+      <div id="ranking-options">
+        <button id="order-by-score">Ordenar por Puntaje</button>
+        <button id="order-by-date">Ordenar por Fecha</button>
+      </div>
+      <div id="ranking-list">
+        
+      </div>
+      <button id="close-ranking-modal">Cerrar</button>
+    </div>
+  </div>
+  
     <script src="script.js"></script>
+
 </body>
 </html>

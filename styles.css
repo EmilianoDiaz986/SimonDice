@@ -1,19 +1,75 @@
+
+h1 {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
 body {
     text-align: center;
     background-color: rgb(2, 2, 2);
+
+}
+label {
+    font-weight: bold; 
+    font-size: 20px; 
+  }
+/* Estilos generales para los botones */
+.button-info {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 4px;
+  }
+  
+ 
+  .info {
+    text-align: right;
+  }
+  
+  
+
+
+#score, #timer, #nivel {
+    color: rgb(0, 250, 33);
+}
+
+.game-info p {
+    font-weight: bold; 
+    font-size: 20px;   
+    color: white;
 }
 
 h1 {
     text-align: center;
     color:rgb(233, 233, 233)
   }
-.scoreboard {
-    color:rgb(233, 233, 233)
+
+#level {
+    color: rgb(0, 250, 33);
 }
+
+
 h2 {
  color: rgb(255, 255, 255);
  
 }
+
+.hidden {
+    display: none;
+}
+
+#name-form {
+    margin-top: 20px; 
+}
+
+#name-form label {
+    color: white;
+  }
 
 
 .simon-device {
@@ -29,7 +85,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.button {
+.button-juego {
     width: 150px;
     height: 150px;
     margin: 10px;
@@ -37,8 +93,35 @@ h2 {
     cursor: pointer;
 }
 
-.button.active {
+.button-juego.active {
     opacity: 0.5;
+  }
+#game-over-modal .modal-content h3,
+#game-over-modal .modal-content p {
+  color: white;
+}
+
+button {
+    background-color: white; 
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin: 5px; 
+  }
+
+ 
+  button[disabled] {
+    opacity: 0; 
+    cursor: not-allowed; 
+  }
+
+
+  button:hover {
+    background-color: #333;
+    color: white;
   }
 
 #green {
@@ -105,3 +188,121 @@ h2 {
     margin-top: 10px;
     border-color: aqua;
 }
+
+
+/* Estilos para el contenedor del ranking */
+#ranking-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    max-width: 600px;
+  margin: 0 auto;
+  }
+  
+  #ranking-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #ranking-list {
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+  }
+  
+  
+  #ranking-list p {
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #ranking-list p:last-child {
+    border-bottom: none;
+  }
+  
+  #ranking-list span {
+    font-weight: bold;
+  }
+  
+  /* Estilos para el botón de ordenar ranking */
+  #order-by-score,
+  #order-by-date {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para el modal de juego terminado */
+  .modal-content {
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Estilos para el botón de cerrar el modal */
+  #close-modal,
+  #close-ranking-modal {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  /* Estilos responsive */
+  
+  /* Ajustar tamaño de los botones de colores en pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    .button-juego {
+      width: 100px;
+      height: 100px;
+    }
+    
+    #ranking-modal {
+      max-width: 400px;
+    }
+    
+    #ranking-list {
+      max-height: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    #name-form {
+      max-width: 300px;
+    }
+    
+    #order-by-score,
+    #order-by-date {
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+    
+    h1 {
+      font-size: 20px;
+    }
+  
+    #start,
+    #reset,
+    #show-ranking,
+    .modal-content button,
+    #ranking-modal h2,
+    #ranking-list p {
+      font-size: 12px;
+    }
+  
+    .modal-content p {
+      font-size: 14px;
+    }
+  }
+  
+  #ranking-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
