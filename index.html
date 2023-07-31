@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Simon Dice</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
     <div class="info">
         <a class="button button-info" href="contacto.html">Contacto</a>
         <a class="button button-info" href="https://github.com/EmilianoDiaz986/SimonDice" target="_blank">Github</a>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </div>
     
-
-
-</head>
-
-<body>
     <a href="index.html" style="display: block;">
         <img src="logo.png" alt="logo">
-      </a>
-      
+    </a>
 
     <div class="game-info">
         <p>Tiempo: <span id="timer">0</span></p>
@@ -36,7 +31,6 @@
         </div>
     </div>
 
-
     <button id="start">Comenzar</button>
     <button id="reset" disabled>Reiniciar</button>
     <button id="show-ranking">Mostrar Ranking</button>
@@ -49,35 +43,32 @@
         </form>
     </div>
 
-
-
-<div id="game-over-modal" class="modal">
-    <div class="modal-content">
-      <h3>¡Has Perdido! Juego terminado</h2>
-      <p>Nombre: <span id="game-over-name"></span></p>
-      <p>Puntaje: <span id="game-over-score"></span></p>
-      <p>Nivel: <span id="game-over-level"></span></p>
-      <p>Tiempo : <span id="game-over-time"></span></p>
-      <p>Fecha y Hora: <span id="game-over-datetime"></span></p>
-      <button id="close-modal">Cerrar</button>
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h3>¡Has Perdido! Juego terminado</h3>
+            <p>Nombre: <span id="game-over-name"></span></p>
+            <p>Puntaje: <span id="game-over-score"></span></p>
+            <p>Nivel: <span id="game-over-level"></span></p>
+            <p>Tiempo : <span id="game-over-time"></span></p>
+            <p>Fecha y Hora: <span id="game-over-datetime"></span></p>
+            <button id="close-modal">Cerrar</button>
+        </div>
     </div>
-  </div>
 
-  <div id="ranking-modal" class="modal">
-    <div class="modal-content">
-      <h2>Ranking de Partidas</h2>
-      <div id="ranking-options">
-        <button id="order-by-score">Ordenar por Puntaje</button>
-        <button id="order-by-date">Ordenar por Fecha</button>
-      </div>
-      <div id="ranking-list">
-        
-      </div>
-      <button id="close-ranking-modal">Cerrar</button>
+    <div id="ranking-modal" class="modal">
+        <div class="modal-content">
+            <h2>Ranking de Partidas</h2>
+            <div id="ranking-options">
+                <button id="order-by-score">Ordenar por Puntaje</button>
+                <button id="order-by-date">Ordenar por Fecha</button>
+            </div>
+            <div id="ranking-list">
+            
+            </div>
+            <button id="close-ranking-modal">Cerrar</button>
+        </div>
     </div>
-  </div>
-  
+
     <script src="script.js"></script>
-
 </body>
 </html>
